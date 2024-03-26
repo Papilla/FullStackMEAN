@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myapp';
+
+  styles = {
+    display: 'flex',
+    'flex-direction': 'column',
+    'align-items': 'center',
+    padding: '20px',
+    width: '200px',
+  }
 }

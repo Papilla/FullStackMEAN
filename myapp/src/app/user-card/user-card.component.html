@@ -1,0 +1,10 @@
+<div>
+    <h1>Nombre: {{name}}</h1>
+    <h2>Apellido: {{surname}}</h2>
+    <p>Edad: {{age}}</p>
+    <p>Nacionalidad: {{nationality}}</p>
+    <p>Casado: {{married}}</p>
+    <!-- <p>Dirección: {{address | json}}</p> -->
+    <p>Dirección {{address.country}} {{address.city}} {{address.street}}</p>
+    <p>{{getDate()}}</p> <!-- Mejor no usar funciones dentro de componentes -->
+</div>
