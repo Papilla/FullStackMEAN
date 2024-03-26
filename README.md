@@ -6,3 +6,4 @@ Para mostrar el proyecto en la web, tienes que escribir en la consola el comando
 ### 26/03/2024
 Acabo de aprender cómo se crea un componente desde cero en angular, usando comandos de consola y sin usarlos. En consola, solo tienes que irte a la carpeta del proyecto y poner: **ng g c (nombreComponente)**.
 También se pueden compartir datos entre componentes, ya sea del hijo al padre o del padre al hijo mediante variables y eventos.
+Cabe destacar que se puede usar un componente dentro de otro componente, exactamente igual que como hicimos en la creación de componentes en la segunda evaluación de DI. Cada componente tiene su propio código html, sus estilos y su archivo que contiene información sobre este, que tendrá como extensión "ts".
