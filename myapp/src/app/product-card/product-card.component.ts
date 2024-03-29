@@ -11,6 +11,8 @@ export class ProductCardComponent {
     name: 'Unbranded Granite Computer',
     description: 'The Football Is Good For Training And Recreational Purposes',
     unitAvailable: 20,
+    date: 'Sat Mar 23 2024 23:00:46 GMT+0100 (Central European Standard Time)',
+    price: 34.5436456,
   }
 
   productImageStyle = {
