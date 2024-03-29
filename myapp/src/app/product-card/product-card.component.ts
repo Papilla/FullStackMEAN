@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
@@ -6,14 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
-  product = {
-    image: 'https://minorwatches.com/wp-content/uploads/2022/08/Minor_18-copia-300x300.webp',
-    name: 'Unbranded Granite Computer',
-    description: 'The Football Is Good For Training And Recreational Purposes',
-    unitAvailable: 20,
-    date: 'Sat Mar 23 2024 23:00:46 GMT+0100 (Central European Standard Time)',
-    price: 34.5436456,
-  }
+  @Input() product: any
 
   productImageStyle = {
     border: '1px solid black',
