@@ -1,4 +1,6 @@
 <header>
     <app-title [title]="pageTitle" (dataFromChild)="onDataCheck($event)"></app-title>
+    <a routerLink="/products" routerLinkActive="active">Products</a>
+    <a routerLink="/about-us" routerLinkActive="active">About us</a>
     <app-avatar [userInfo]="userInfo"></app-avatar>
 </header>

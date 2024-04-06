@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './products/products.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ComponentsModule } from '../components/components.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
 @NgModule({
   declarations: [
     ProductsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { ComponentsModule } from '../components/components.module';
   ],
   exports: [
     ProductsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    NotFoundComponent,
   ]
 })
 export class PagesModule { }
