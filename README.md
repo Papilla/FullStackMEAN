@@ -26,4 +26,9 @@ Hoy he aprendido a hacer eventos, respuestas y recoger datos interactuando direc
 ![image](https://github.com/Papilla/FullStackMEAN/assets/50876042/6d866e8c-6832-496c-bea4-566d725c7793)
 Tambien se pueden mostrar los datos de una mejor manera para el usuario usando Pipes. Para usarlos tienes que agregar un **|** dentro de los dobles corchetes y escribir una función que hará automáticamente el formateo necesario como se ve a continuación.
 ![Captura de pantalla 2024-03-29 203232](https://github.com/Papilla/FullStackMEAN/assets/50876042/27460066-ee06-4538-ab53-1e62dd13d0e3)
+Las operaciones lógicas como el *if-else*, el *for*, el *switch*... Se pueden utilizar en Angular en forma de atributos de una etiqueta, anteponiendo un ***ng** y luego la operación a llevar a cabo. Dentro de las comillas dobles, se hace la cláusula normal del operador que utilicemos en cuestión, aunque solo se puede usar uno de estos por cada etiqueta. Por esto, en Angular hay etiquetas *invisibles* que se llaman *ng-container*, que son como un *div* pero no hacen retornos de carro, y sirven para encapsular estas operaciones como vemos en la siguiente imagen.
+![image](https://github.com/Papilla/FullStackMEAN/assets/50876042/5e4f0daa-ecf4-400c-a4a5-806e72191da5)
 
+
+### 06/04/2024
+Ahora puedo tener mi código ordenado según las clases y para que se necesiten cada una dentro de módulos, es decir, los componentes estarán dentro de un módulo que se llama *componentes*, y las distintas páginas que vaya utilizando (página principal, about us...) irán dentro de otro módulo llamado pages. De esta manera el código estará más limpio y más ordenado.
