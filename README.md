@@ -43,3 +43,4 @@ Para poder utilizar los enlaces a estas redirecciones en nuestra página web, ut
 ```angular
 <a routerLink="/products" routerLinkActive="active">Products</a>
 ```
+También se pueden recoger datos mediante el *HttpClient* recogiendo los datos de un archivo, en este caso, estoy recogiendo los datos de un archivo json con los datos de los productos dentro de la carpeta assets. Para recogerlos, solo se necesita llamar a la función de recoger los datos dentro del *OnInit()* del componente que se quiere utilizar, en este caso, el de productos. Es necesario implementar un **provider** llamando a la clase donde recogemos los datos del json mediante el HttpClient y por supuesto, importar la clase HttpClientModule en el *app.module.ts*.
