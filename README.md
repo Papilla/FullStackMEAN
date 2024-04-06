@@ -32,3 +32,14 @@ Las operaciones lógicas como el *if-else*, el *for*, el *switch*... Se pueden u
 
 ### 06/04/2024
 Ahora puedo tener mi código ordenado según las clases y para que se necesiten cada una dentro de módulos, es decir, los componentes estarán dentro de un módulo que se llama *componentes*, y las distintas páginas que vaya utilizando (página principal, about us...) irán dentro de otro módulo llamado pages. De esta manera el código estará más limpio y más ordenado. Pero para poder utilizar los componentes que estén dentro de estos módulos, se necesitan añadir a un array de exports en el **.module.ts*, exactamente igual como el que tendremos de imports, pero dentro del array añadiremos los componentes que querramos utilizar.
+Para poder moverse entre las distintas páginas se necesitará añadir en el *app.component.html* (el html principal) la etiqueta **router-outlet** la cual sirve para que angular redireccione automáticamente las páginas que queremos. Pero eso no es todo, para decirle qué páginas queremos mostrar, iremos al *app-routing.module.ts* y dentro del array de Routes añadiremos la siguiente línea de código: 
+```angular
+{ path: 'products', component: ProductsComponent },
+{ path: '', redirectTo: '/products', pathMatch: 'full' },
+{ path: '**', component: NotFoundComponent },
+```
+La segunda línea sirve para tener una página principal, usaremos el recirectTo y el pathMatch como parámetro, y la tercera línea sirve para tener una página de Not Found en caso de que no se encuentre la redicrección a la página.
+Para poder utilizar los enlaces a estas redirecciones en nuestra página web, utilizaremos una etiqueta *a* pero con el parámetro *routerLink*, que sirve exactamente igual que el *href* pero en angular se utiliza el otro para que pueda moverse entre páginas de forma automática.
+```angular
+<a routerLink="/products" routerLinkActive="active">Products</a>
+```
