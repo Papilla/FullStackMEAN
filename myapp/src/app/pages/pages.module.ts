@@ -21,6 +21,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ProductsComponent,
     AboutUsComponent,
     NotFoundComponent,
-  ]
+  ],
 })
 export class PagesModule { }
