@@ -30,3 +30,5 @@ Las operaciones lógicas como el *if-else*, el *for*, el *switch*... Se pueden u
 ![image](https://github.com/Papilla/FullStackMEAN/assets/50876042/5e4f0daa-ecf4-400c-a4a5-806e72191da5)
 
 
+### 06/04/2024
+Ahora puedo tener mi código ordenado según las clases y para que se necesiten cada una dentro de módulos, es decir, los componentes estarán dentro de un módulo que se llama *componentes*, y las distintas páginas que vaya utilizando (página principal, about us...) irán dentro de otro módulo llamado pages. De esta manera el código estará más limpio y más ordenado.
