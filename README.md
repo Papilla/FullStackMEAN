@@ -44,3 +44,7 @@ Para poder utilizar los enlaces a estas redirecciones en nuestra página web, ut
 <a routerLink="/products" routerLinkActive="active">Products</a>
 ```
 También se pueden recoger datos mediante el *HttpClient* recogiendo los datos de un archivo, en este caso, estoy recogiendo los datos de un archivo json con los datos de los productos dentro de la carpeta assets. Para recogerlos, solo se necesita llamar a la función de recoger los datos dentro del *OnInit()* del componente que se quiere utilizar, en este caso, el de productos. Es necesario implementar un **provider** llamando a la clase donde recogemos los datos del json mediante el HttpClient y por supuesto, importar la clase HttpClientModule en el *app.module.ts*.
+
+## Uso del DOM
+### 07/04/2024
+Hoy he aprendido qué es el DOM, cómo utilizarlo bien y otras formas de uso, en este caso con el Renderer2. De esta manera, he podido crear eventos a partir de elementos del DOM, creando, modificando y borrando elementos, añadiendo estilos a los párrafos...
