@@ -48,3 +48,17 @@ También se pueden recoger datos mediante el *HttpClient* recogiendo los datos d
 ## Uso del DOM
 ### 07/04/2024
 Hoy he aprendido qué es el DOM, cómo utilizarlo bien y otras formas de uso, en este caso con el Renderer2. De esta manera, he podido crear eventos a partir de elementos del DOM, creando, modificando y borrando elementos, añadiendo estilos a los párrafos...
+Para llamar a un elemento, tienes que añadir el *#* dentro de la etiqueta y se recoge mediante un ViewChild como un *ElementRef*.
+```angular
+<p #aventureros>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
+            probably just keep going until we run out of words.</p>
+
+@ViewChild('aventureros') aventurerosElement: ElementRef | undefined
+```
+Para añadir clases o cambiar textos, tienes que crear un Render y llamarlo constantemente en las funciones que tengas dentro del archivo *app.component.ts* y coger los elementos necesarios, en este caso cogeríamos el *aventurerosElement*.
+```angular
+cambiarTexto(elemento: any, texto: string) {
+    this._render.setProperty(elemento.nativeElement, 'outerText', texto);
+    this._render.removeClass(this.aventurerosElement?.nativeElement, 'bg-danger')
+  }
+```
