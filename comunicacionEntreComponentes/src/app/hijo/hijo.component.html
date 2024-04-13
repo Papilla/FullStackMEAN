@@ -1,0 +1,14 @@
+<div class="row align-items-md-stretch">
+    <div class="col-md-6">
+        <div class="h-100 p-5 bg-{{color}} rounded-3">
+            <h2>
+                {{casa || 'Selecciona una casa'}}
+                <span *ngIf="titulo">Añadir {{titulo}}</span>
+            </h2>
+            <form action="">
+                <input type="text" class="form-control my-2" placeholder="Alumno" #nuevaEntrada>
+                <button type="button" (click)="agregarAlumno(nuevaEntrada.value)">Añadir {{titulo}}</button>
+            </form>
+        </div>
+    </div>
+</div>

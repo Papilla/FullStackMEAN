@@ -1,0 +1,43 @@
+<main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img">
+          <title>Comunicación componentes</title>
+          <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"
+            d="M24.509 0c-6.733 0.11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v">
+          </path>
+        </svg>
+        <span class="fs-4">Comunicación entre componentes</span>
+      </a>
+    </header>
+
+    <section class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <img src="https://www.freepnglogos.com/uploads/hogwarts-logo-png/hogwarts-logo-shadopro-deviantart-0.png" alt=""
+          height="200">
+        <h1 class="display-5 fw-bold">Hogwarts</h1>
+        <p class="col-md-8 fs-4">Este es el componente padre</p>
+
+        <div class="d-flex justify-content-between">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-{{colores[i]}}" *ngFor="let casa of casas; let i = index">
+              <input type="radio" name="options" id="option{{i+1}}" autocomplete="off" (click)="onSelectCasa(casa, colores[i])">
+              {{casa}}
+            </label>
+          </div>
+
+          <p *ngIf="seleccion" class="m-0 align-self-center">Has seleccionado la casa <span class="texto-{{seleccion.color}}">{{seleccion.casa}}</span></p>
+
+          <div>
+            <button class="btn btn-secondary" (click)="limpiarSeleccion()">Limpiar selección</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <app-hijo *ngIf="seleccion" [casa]="seleccion.casa" [color]="seleccion.color" [titulo]="'Profesor'" (elementoAdd)="agregarAlumno($event)"></app-hijo>
+
+    <footer class="pt3 mt4 text-muted border-top">© Nicolás Fernández, 2024</footer>
+  </div>
+</main>
