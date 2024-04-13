@@ -62,3 +62,17 @@ cambiarTexto(elemento: any, texto: string) {
     this._render.removeClass(this.aventurerosElement?.nativeElement, 'bg-danger')
   }
 ```
+
+## Comunicación entre componentes
+### 13/04/2024
+Ahora ya sé enviar datos de un componente padre a un componente hijo (*padre => hijo*) mediante **@Input()** y la variable que se quiera recoger.
+```js
+  @Input() casa!: string;
+  @Input() color!: string;
+  @Input() titulo!: string;
+```
+De la misma manera, se pueden recoger datos del hijo con el padre (*hijo => padre*) mediante **Output()**, aunque esta vez se tendrá que usar el evento emit() para enviar los datos.
+```js
+  @Output() elementoAdd = new EventEmitter<any>();
+  this.elementoAdd.emit({ nombre: nombre, casa: this.casa, color: this.color });
+```
