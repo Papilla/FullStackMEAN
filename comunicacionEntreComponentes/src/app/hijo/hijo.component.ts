@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-hijo',
@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './hijo.component.html',
   styleUrl: './hijo.component.scss',
 })
-export class HijoComponent implements OnInit {
+export class HijoComponent {
   constructor() { }
 
   @Input() casa!: string;
@@ -16,9 +16,6 @@ export class HijoComponent implements OnInit {
   @Input() titulo!: string;
 
   @Output() elementoAdd = new EventEmitter<any>();
-
-  ngOnInit(): void {
-  }
 
   agregarAlumno(nombre: string): void {
     console.log(nombre);
