@@ -76,3 +76,26 @@ De la misma manera, se pueden recoger datos del hijo con el padre (*hijo => padr
   @Output() elementoAdd = new EventEmitter<any>();
   this.elementoAdd.emit({ nombre: nombre, casa: this.casa, color: this.color });
 ```
+
+## Personalizar temas en Angular Material
+### 14/04/2024
+En este módulo del curso, he aprendido a implementar mi propia paleta de colores usando Angular Material. Para ello, solo tenemos que ejecutar el comando **`@angular/material`** y seguir los pasos pertinentes que aparecerán por consola. Una vez hecho esto, nos crearemos un archivo *.scss (archivo de estilos) en la carpeta *assets* y añadiremos las siguientes líneas:
+```js
+@use '@angular/material'as mat;
+@include mat.core();
+```
+A continuación, implementaremos varios colores (yo cogí automáticamente una variedad de colores en la página *http://mcg.mbitson.com/*) y crearemos las variables para cada paleta de colores, escogiendo el color que más nos guste. Ahora definiremos el tema principal con los colores que hemos escogido con los nuestros nuevos colores y para finalizar, incluiremos nuestro nuevo tema a todos los temas de los componentes.
+```js
+$my-primary: mat.define-palette($custom-primary-palette, 900);
+$my-accent: mat.define-palette($custom-accent-palette, 600);
+$my-warn: mat.define-palette($custom-warn-palette, 800);
+
+$my-theme: mat.define-light-theme((color: (primary: $my-primary,
+            accent: $my-accent,
+            warn: $my-warn,
+        ),
+    ));
+
+@include mat.all-component-themes($my-theme);
+```
+Para finalizar, solo tendremos que ir a nuestro archivo *angular.json* y añadir, en el array de **"styles"** la ruta relativa del archivo que acabamos de crear.
