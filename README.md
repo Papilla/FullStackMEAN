@@ -2,7 +2,7 @@
 
 ## Fundamentos de Angular
 ### 24/03/2024
-Hoy he descargado un proyecto Angular y he aprendido a mostrar la página en el localhost desarrollada en vivo actualizando la página según hacía cambios en la página. Para crear un proyecto de angular solo tienes que escribir en la consola: **ng n (nombreProyecto)**, pero antes, tendrás que tener instalado el nodejs, npm y angular.
+Hoy he descargado un proyecto Angular y he aprendido a mostrar la página en el localhost desarrollada en vivo actualizando la página según hacía cambios en la página. Para crear un proyecto de angular solo tienes que escribir en la consola: **`ng n (nombreProyecto)`**, pero antes, tendrás que tener instalado el nodejs, npm y angular.
 Para mostrar el proyecto en la web, tienes que escribir en la consola el comando **`ng s`** e irte al navegador al puerto **http://localhost:4200**
 
 
@@ -61,4 +61,18 @@ cambiarTexto(elemento: any, texto: string) {
     this._render.setProperty(elemento.nativeElement, 'outerText', texto);
     this._render.removeClass(this.aventurerosElement?.nativeElement, 'bg-danger')
   }
+```
+
+## Comunicación entre componentes
+### 13/04/2024
+Ahora ya sé enviar datos de un componente padre a un componente hijo (*padre => hijo*) mediante **@Input()** y la variable que se quiera recoger.
+```js
+  @Input() casa!: string;
+  @Input() color!: string;
+  @Input() titulo!: string;
+```
+De la misma manera, se pueden recoger datos del hijo con el padre (*hijo => padre*) mediante **Output()**, aunque esta vez se tendrá que usar el evento emit() para enviar los datos.
+```js
+  @Output() elementoAdd = new EventEmitter<any>();
+  this.elementoAdd.emit({ nombre: nombre, casa: this.casa, color: this.color });
 ```
