@@ -2,7 +2,7 @@
 
 ## Fundamentos de Angular
 ### 24/03/2024
-Hoy he descargado un proyecto Angular y he aprendido a mostrar la página en el localhost desarrollada en vivo actualizando la página según hacía cambios en la página. Para crear un proyecto de angular solo tienes que escribir en la consola: **ng n (nombreProyecto)**, pero antes, tendrás que tener instalado el nodejs, npm y angular.
+Hoy he descargado un proyecto Angular y he aprendido a mostrar la página en el localhost desarrollada en vivo actualizando la página según hacía cambios en la página. Para crear un proyecto de angular solo tienes que escribir en la consola: **`ng n (nombreProyecto)`**, pero antes, tendrás que tener instalado el nodejs, npm y angular.
 Para mostrar el proyecto en la web, tienes que escribir en la consola el comando **`ng s`** e irte al navegador al puerto **http://localhost:4200**
 
 
