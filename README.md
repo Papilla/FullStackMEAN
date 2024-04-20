@@ -96,3 +96,11 @@ $my-theme: mat.define-light-theme((color: (primary: $my-primary,
 @include mat.all-component-themes($my-theme);
 ```
 Para finalizar, solo tendremos que ir a nuestro archivo *angular.json* y añadir, en el array de **"styles"** la ruta relativa del archivo que acabamos de crear.
+
+### Consumir APIs externas en Angular
+## 20/04/2024
+Ahora aprendí a usar apis externas en un proyecto de angular mediante el método Http. Mediante el método http.get({url}) puedes acceder mediante el método get a una api y sacar todos los datos necesarios.
+```js
+this.http.get(`https://pokeapi.co/api/v2/pokemon`)
+```
+Dentro de la url se puede hacer una consulta más o menos específica, recogiendo el dato de un solo pokémon (en este caso, claro está), o recogiendo los datos de todos.
