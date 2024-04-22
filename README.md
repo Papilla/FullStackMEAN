@@ -104,3 +104,12 @@ Ahora aprendí a usar apis externas en un proyecto de angular mediante el métod
 this.http.get(`https://pokeapi.co/api/v2/pokemon`)
 ```
 Dentro de la url se puede hacer una consulta más o menos específica, recogiendo el dato de un solo pokémon (en este caso, claro está), o recogiendo los datos de todos.
+
+### i18n: Internacionalización en Angular
+## 22/04/2024
+En este módulo del curso he aprendido a cambiar el idioma de los textos de un proyecto en Angular usando i18n. Todo lo que hay que hacer es añadir el atributo *`i18n`* en todas las etiquetas que queramos cambiarle el idioma. Después, tenemos que ir a la carpeta de locales y cambiar los textos que queramos cambiar de idioma, y se cambia añadiendo en otro archivo, las etiquetas que sean de *source*, se duplican, se le cambia la etiqueta a *target*, y en esta nueva etiqueta se le cambia el texto al idioma que se quiere añadir. Un ejemplo sería el siguiente:
+```js
+<source>Congratulations! Your app is running. 🎉</source>
+<target>Felicidades! Tu app está funcionando a tiempo real. 🎉</target>
+```
+Para finalizar, se tienen que añadir las configuraciones pertinentes (añadir el i18n y el locale) dentro de los archivos de *package.json* y *angular.json*.
