@@ -97,16 +97,16 @@ $my-theme: mat.define-light-theme((color: (primary: $my-primary,
 ```
 Para finalizar, solo tendremos que ir a nuestro archivo *angular.json* y añadir, en el array de **"styles"** la ruta relativa del archivo que acabamos de crear.
 
-### Consumir APIs externas en Angular
-## 20/04/2024
+## Consumir APIs externas en Angular
+### 20/04/2024
 Ahora aprendí a usar apis externas en un proyecto de angular mediante el método Http. Mediante el método http.get({url}) puedes acceder mediante el método get a una api y sacar todos los datos necesarios.
 ```js
 this.http.get(`https://pokeapi.co/api/v2/pokemon`)
 ```
 Dentro de la url se puede hacer una consulta más o menos específica, recogiendo el dato de un solo pokémon (en este caso, claro está), o recogiendo los datos de todos.
 
-### i18n: Internacionalización en Angular
-## 22/04/2024
+## i18n: Internacionalización en Angular
+### 22/04/2024
 En este módulo del curso he aprendido a cambiar el idioma de los textos de un proyecto en Angular usando i18n. Todo lo que hay que hacer es añadir el atributo *`i18n`* en todas las etiquetas que queramos cambiarle el idioma. Después, tenemos que ir a la carpeta de locales y cambiar los textos que queramos cambiar de idioma, y se cambia añadiendo en otro archivo, las etiquetas que sean de *source*, se duplican, se le cambia la etiqueta a *target*, y en esta nueva etiqueta se le cambia el texto al idioma que se quiere añadir. Un ejemplo sería el siguiente:
 ```js
 <source>Congratulations! Your app is running. 🎉</source>
