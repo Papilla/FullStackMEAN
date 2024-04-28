@@ -1,0 +1,23 @@
+GET http://localhost:3000/products?pages=150&capitulos=3
+###
+GET http://localhost:3000/products/8891
+###
+GET http://localhost:3000/products/new
+###
+POST http://localhost:3000/products/create
+Content-Type: application/json
+
+{
+    "name": "Ordenador",
+    "price": 120,
+    "stock": 10,
+    "available": true
+}
+
+###
+
+GET http://localhost:3000/users
+###
+GET http://localhost:3000/users/edit
+###
+POST http://localhost:3000/users/update

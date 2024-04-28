@@ -1,0 +1,38 @@
+extends layout.pug
+
+block content
+  h2 Subtítulo
+  div 
+    p Contenido del párrafo 
+
+  div 
+    a(href="http://www.google.com", class="", id="") Google
+    a#enlaceYoutube.enlace.principal(href="http://www.youtube.com") Youtube
+
+  div 
+    p= name
+    p Me llamo #{name}
+
+  div 
+    if available
+      p Está disponible 
+    else
+      p No está disponible
+
+  div 
+    ul
+      - for(let i = 0; i < animals.length; i++)
+        li= animals[i]
+
+  div
+    - animals = []
+    ul 
+      // Comentario HTML
+      //- Comentario PUG
+      each animal in animals 
+        li Animal: #{animal}
+      else 
+        li No hay animales
+
+block footer 
+  p Lista de animales
