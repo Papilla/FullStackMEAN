@@ -97,10 +97,31 @@ $my-theme: mat.define-light-theme((color: (primary: $my-primary,
 ```
 Para finalizar, solo tendremos que ir a nuestro archivo *angular.json* y añadir, en el array de **"styles"** la ruta relativa del archivo que acabamos de crear.
 
-### Consumir APIs externas en Angular
-## 20/04/2024
+## Consumir APIs externas en Angular
+### 20/04/2024
 Ahora aprendí a usar apis externas en un proyecto de angular mediante el método Http. Mediante el método http.get({url}) puedes acceder mediante el método get a una api y sacar todos los datos necesarios.
 ```js
 this.http.get(`https://pokeapi.co/api/v2/pokemon`)
 ```
 Dentro de la url se puede hacer una consulta más o menos específica, recogiendo el dato de un solo pokémon (en este caso, claro está), o recogiendo los datos de todos.
+
+## i18n: Internacionalización en Angular
+### 22/04/2024
+En este módulo del curso he aprendido a cambiar el idioma de los textos de un proyecto en Angular usando i18n. Todo lo que hay que hacer es añadir el atributo *`i18n`* en todas las etiquetas que queramos cambiarle el idioma. Después, tenemos que ir a la carpeta de locales y cambiar los textos que queramos cambiar de idioma, y se cambia añadiendo en otro archivo, las etiquetas que sean de *source*, se duplican, se le cambia la etiqueta a *target*, y en esta nueva etiqueta se le cambia el texto al idioma que se quiere añadir. Un ejemplo sería el siguiente:
+```js
+<source>Congratulations! Your app is running. 🎉</source>
+<target>Felicidades! Tu app está funcionando a tiempo real. 🎉</target>
+```
+Para finalizar, se tienen que añadir las configuraciones pertinentes (añadir el i18n y el locale) dentro de los archivos de *package.json* y *angular.json*.
+
+## Desarrollo de aplicaciones web con NodeJS y Express
+### 28/04/2024
+En este curso he aprendido a manejar el NodeJS y el Express, que son dos entornos de programación a tiempo real para crear servidores. Funciona muy parecido al javascript, pero la diferencia es que no trabaja dentro de una página web, funciona de forma independiente en un propio servidor. Dentro del module.exports, devuelve los datos de una clase para utilizarlo en otros archivos (como si fuera de herencia), pero en este caso, para poder usar las funciones o las variables dentro del module.exports, necesitas llamar a la clase mediante un *require*. En caso de solo querer usar una función o un valor, puedes deconstruir la clase entera usando las llaves `{ }` y dentro poner una clave. En caso de poner al final del require *.default*. Una función callback es una función que funciona exactamente igual que una lambda pero en este caso se añade `() => {}` como parámetro. Esta función espera en tiempo real a que termine y recoge una promesa con *.then* y para finalizar, con un *.catch*. La librería **Fs** sirve para leer y escribir archivos locales.
+
+Hay un tipo de cadenas de texto que se llaman *expresiones regulares* que son aquellas que empiezan y terminan con la '/' y sirven para coincidir combinaciones de cadenas con expresiones regulares. Para leer un archivo Json de manera rápida y sencilla, se utiliza la función JSON.stringify(archivo json).
+
+Con http.createServer() se pueden crear servidores de manera sencilla. Con la librería Express se pueden mandar y recoger datos en un servidor usando get(), post(), delete() y put(). Para recoger estos datos se pueden usar las variables de *req*, que se puede utilizar las *query, params, body...*. Estos valores recogen los datos igual que con otras aplicaciones **REST** pasandole como parámetro al enlace. Otra librería muy conocida y que sirve para mantener constantes en todos los archivos, que es el *.env*. Para recoger estas constantes, se recogen usando el process.env(dato), pero si no viene definido o no existe, se tiene que añadir al final las dos barras '||' como un **OR** para añadir un dato por defecto.
+
+En Express, hay una plantilla por defecto para crear un servidor propio como archivo local. Los archivos que se utilizan para mostrar el diseño de la página web son muy parecidos a los html normal, pero utilizan otra manera de crear esas etiquetas, se utilizan los archivos *.pug*. En este caso, las etiquetas normales (p, h1, a...) solo se llaman al principio de la línea y después el texto que se quiera añadir. Para crear los div, las etiquetas dentro de esta irán tabuladas igual que en python. En caso de querer añadir código javascript, se tendrá que añadir un '-' antes. Para añadir una clase o un id a una etiqueta, se utilizan respectivamente los caracteres '.' y '#' justo después de la etiqueta, sin añadir espacios. El código quedaría de la siguiente manera:
+```pug
+h1
