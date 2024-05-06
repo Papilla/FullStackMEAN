@@ -1,0 +1,13 @@
+{
+  "name": "callback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cps.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
