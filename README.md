@@ -128,3 +128,8 @@ En Express, hay una plantilla por defecto para crear un servidor propio como arc
 ```
 
 Para hacer una conexión con un servidor a tiempo real necesitaremos utilizar la librería **io** para crear un socket de conexión. Con esto ya puedes crear tus propios eventos y añadirles el nombre que quieras con el `addEventListener()`  y enviar los eventos mediante el `io.emit` para recogerlos dentro del archivo *.pug* con un `socket.on`.
+
+
+
+
+He intentado progresar en el curso *Mejorando la performance en Angular* y *Angular en el mundo de la multiplataforma* pero no he podido hacer las instalaciones pertinentes, por lo pasaré de estos dos cursos añadiendo el dato que he aprendido que se puede crear más de un subproyecto dentro de un proyecto grande. De esta manera, las aplicaciones más grandes como por ejemplo, de ventas de productos, pueden estar mejor estructuradas separadas por partes para una mejor organización de código.
