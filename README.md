@@ -129,6 +129,13 @@ En Express, hay una plantilla por defecto para crear un servidor propio como arc
 
 Para hacer una conexión con un servidor a tiempo real necesitaremos utilizar la librería **io** para crear un socket de conexión. Con esto ya puedes crear tus propios eventos y añadirles el nombre que quieras con el `addEventListener()`  y enviar los eventos mediante el `io.emit` para recogerlos dentro del archivo *.pug* con un `socket.on`.
 
+### 06/05/2024
+## Creación y testing de APIs con Node.js y Express
+En este curso, por ahora, he aprendido a manejar los métodos **GET**, **POST**, **PUT** y **DELETE** en NodeJS y recuperar los datos en distintos formatos, como puede ser **HTML** o **JSON**. Tambíen, con el módulo mysql2 se puede acceder a una base de datos creada, y hacer consultas con los datos pertinentes añadiendo '**`?`**' como valor variable de una query, exactamente igual que con las consultas preparadas en Java, solo que en este caso las variables se la pasan dentro de la función query como segundo parámetro dentro de un array. Para el caso del servidor, seguimos utilizando express y el módulo '**`http`**'.
+
+## Patrones de diseño con NodeJS
+Hay una manera distinta de requerir una clase de Javascript en otros archivos a parte de utilizar, como ya conocemos todos, el '**`require`**'. En realidad, se utiliza de manera predeterminada el *require*, pero a esta manera se le llama commonJS. La otra manera de requerir clases externas es con ESM, utilizando `import {nombreClase} / * (en caso de requerir todo) from {nombre}.js`. Es importante tener en cuenta que de esta forma es obligatorio añadir la extensión del archivo que se esté manejando, porque en caso de no hacerlo, dará error. Por el resto se utiliza exactamente igual que el require, puedes hacer una destructuración de la clase, cogiendo solo una variable o una función mediante los corchetes {}. La única cosa que difiere del commonJS es la manera de exportar los archivos, que en este caso, no se utiliza el `module.exports`, se utiliza el `export {variable, función, clase...}`
+Los callbacks son funciones que se le pueden pasar como parámetros a las funciones genéricas, que recogen datos y devuelve el valor o valores como resultado, o error en caso de que este ocurra. A esta función, como acabo de explicar, se le pasarán dos variables, la primera siempre será un error, y la segunda el resultado recibido. Los callback siempre se llaman como funciones con la flecha (*=>*) y el resultado de esta se encontrará dentro de la misma, haciendo una devolución.
 
 
 
