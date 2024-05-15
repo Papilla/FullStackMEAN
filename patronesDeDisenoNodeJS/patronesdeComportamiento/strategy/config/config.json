@@ -1,0 +1,8 @@
+{
+    "postres": {
+        "port": "33452",
+        "url": "123.456.432",
+        "password": "123456789",
+        "user": "adminSystem"
+    }
+}
